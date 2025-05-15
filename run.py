@@ -15,4 +15,8 @@ def make_shell_context():
     }
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Initialize database tables
+    with app.app_context():
+        db.create_all()
+        
+    app.run()
