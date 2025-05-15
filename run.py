@@ -13,10 +13,10 @@ def make_shell_context():
         'Payment': Payment,
         'OrderItem': OrderItem
     }
-
-if __name__ == '__main__':
     # Initialize database tables
     with app.app_context():
         db.create_all()
         
+if __name__ == '__main__':
+
     app.run()
